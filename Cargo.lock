@@ -12,7 +12,7 @@ dependencies = [
  "cfg-if",
  "clap",
  "hostname",
- "ipnetwork",
+ "ipnetwork 0.20.0",
  "libsystemd",
  "mailparse",
  "maplit",
@@ -641,6 +641,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "ipnetwork"
+version = "0.20.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bf466541e9d546596ee94f9f69590f89473455f88372423e0008fc1a7daf100e"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "itoa"
 version = "0.4.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -987,7 +996,7 @@ version = "0.28.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d4d1f8ab1ef6c914cf51dc5dfe0be64088ea5f3b08bbf5a31abc70356d271198"
 dependencies = [
- "ipnetwork",
+ "ipnetwork 0.18.0",
  "libc",
  "pnet_base",
  "pnet_sys",
