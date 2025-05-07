@@ -102,8 +102,8 @@ fn write_ssh_keys(user: User, ssh_keys: Vec<PublicKey>) -> Result<()> {
         .context("failed to switch user/group")?;
 
     // get paths
-    let dir_path = user.home_dir().join(".ssh").join("authorized_keys.d");
-    let file_name = "afterburn";
+    let dir_path = user.home_dir().join(".ssh");
+    let file_name = "authorized_keys";
     let file_path = &dir_path.join(file_name);
 
     // stringify for logging
